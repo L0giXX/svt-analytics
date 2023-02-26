@@ -1,1 +1,25 @@
-gRnuFC4Ualwf
+# SEVENTEEN Title Tracks + ID
+- Adore U
+- Mansae
+- Pretty U
+- VERY NICE
+- BOOMBOOM
+- Don't Wanna Cry
+- CLAP
+- THANKS
+- Just do it
+- CALL CALL CALL
+- Oh My!
+- Home
+- Happy Ending
+- HIT
+- Fear
+- Fallin' Flower
+- Left & Right
+- 24H
+- HOME;RUN
+- Ready to love
+- Rock with you
+- Darl+ing
+- HOT - gRnuFC4Ualwf
+- _WORLD
