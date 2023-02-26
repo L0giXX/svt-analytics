@@ -4,7 +4,6 @@ import "./App.css";
 function App() {
   const KEY = import.meta.env.VITE_KEY;
   const id = "gRnuFC4Ualw";
-  const [data, setData] = useState({});
   const [title, setTitle] = useState("");
   const [viewCount, setViewCount] = useState("");
   const [likeCount, setLikeCount] = useState("");
@@ -16,8 +15,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
-        setData(data);
         setViewCount(data["items"][0].statistics.viewCount);
         setLikeCount(data["items"][0].statistics.likeCount);
         setTitle(data["items"][0].snippet.title);
