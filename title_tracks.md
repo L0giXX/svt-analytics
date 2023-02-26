@@ -1,25 +1,24 @@
 # SEVENTEEN Title Tracks + ID
-- Adore U
-- Mansae
-- Pretty U
-- VERY NICE
-- BOOMBOOM
-- Don't Wanna Cry
-- CLAP
-- THANKS
-- Just do it
-- CALL CALL CALL
-- Oh My!
-- Home
-- Happy Ending
-- HIT
-- Fear
-- Fallin' Flower
-- Left & Right
-- 24H
-- HOME;RUN
-- Ready to love
-- Rock with you
-- Darl+ing
-- HOT - gRnuFC4Ualwf
-- _WORLD
+- Adore U -         9rUFQJrCT7M
+- Mansae            9M7k9ZV67c0
+- Pretty U          j59LLNMEOZk
+- VERY NICE         J-wFp43XOrA
+- BOOMBOOM          IzplmS-VeBc
+- Don't Wanna Cry   zEkg4GBQumc
+- CLAP              CyzEtbG-sxY
+- THANKS            gZItyr1SNjU
+- CALL CALL CALL    BgR_HJ7aGDY
+- Oh My!            _5PELxP8Udg
+- Home              R9VDPMk5ls0
+- Happy Ending      cA1b99JSQq0
+- HIT               F9CrRG6j2SM
+- Fear              ap14O5-G7UA
+- Fallin' Flower    u4iDL3c0T1c
+- Left & Right      HdZdxocqzq4
+- 24H               MmI-vsaOoUE
+- HOME;RUN          UB4FzllQCyc
+- Ready to love     yCvSR4lSqTg
+- Rock with you     WpuatuzSDK4
+- Darl+ing          bTtNV6hgDno
+- HOT               gRnuFC4Ualwf
+- _WORLD            VCDWg0ljbFQ

@@ -1,32 +1,24 @@
 import { useState } from "react";
 import "./App.css";
+import YoutubeAPI from "./components/YoutubeAPI";
 
 function App() {
-  const KEY = import.meta.env.VITE_KEY;
-  const id = "VCDWg0ljbFQ";
-  const [title, setTitle] = useState("");
-  const [viewCount, setViewCount] = useState("");
-  const [likeCount, setLikeCount] = useState("");
-  const apiHandler = () => {
-    fetch(
-      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${id}&key=${KEY}`
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setViewCount(data["items"][0].statistics.viewCount);
-        setLikeCount(data["items"][0].statistics.likeCount);
-        setTitle(data["items"][0].snippet.title);
-      });
-  };
+  const [title, setTitle] = useState([]);
+  const [viewCount, setViewCount] = useState([]);
+  const [likeCount, setLikeCount] = useState([]);
   return (
     <div className="App">
-      <h1>Seventeen Analytics</h1>
-      <button onClick={apiHandler}>Output</button>
-      <div>Title: {title}</div>
-      <div>View Count: {viewCount}</div>
-      <div>Like Count: {likeCount}</div>
+      <header>
+        <h1>Seventeen Analytics</h1>
+      </header>
+      <YoutubeAPI
+        title={title}
+        setTitle={setTitle}
+        viewCount={viewCount}
+        setViewCount={setViewCount}
+        likeCount={likeCount}
+        setLikeCount={setLikeCount}
+      />
     </div>
   );
 }
