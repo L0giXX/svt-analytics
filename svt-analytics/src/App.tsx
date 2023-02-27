@@ -9,8 +9,6 @@ function App() {
     apiHandler();
   }, []);
 
-  let nextID = 0;
-
   const arr = new Array(
     "9rUFQJrCT7M",
     "9M7k9ZV67c0",
@@ -54,7 +52,6 @@ function App() {
       setViewCount([...viewCount, ...views]);
       setLikeCount([...likeCount, ...likes]);
     }
-    console.log("Title: ", title);
   };
 
   return (
