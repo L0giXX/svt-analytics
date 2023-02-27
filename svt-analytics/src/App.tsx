@@ -1,13 +1,22 @@
 import { useState, useEffect } from "react";
+import YoutubeStats from "./components/YoutubeStats";
 import "./App.css";
 
 function App() {
+  const [videoData, setVideoData] = useState({
+    titleName: "",
+    views: "",
+    likes: "",
+  });
+  const [videos, setVideos] = useState<string[]>([]);
   const [title, setTitle] = useState<string[]>([]);
   const [viewCount, setViewCount] = useState<string[]>([]);
   const [likeCount, setLikeCount] = useState<string[]>([]);
   useEffect(() => {
     apiHandler();
   }, []);
+
+  let id = 0;
 
   const arr = new Array(
     "9rUFQJrCT7M",
@@ -51,6 +60,14 @@ function App() {
       setTitle([...title, ...titles]);
       setViewCount([...viewCount, ...views]);
       setLikeCount([...likeCount, ...likes]);
+
+      setVideoData((existingVideos) => ({
+        ...existingVideos,
+        titleName: data["items"][0].snippet.title,
+        views: data["items"][0].statistics.viewCount,
+        likes: data["items"][0].statistics.likeCount,
+      }));
+      //setVideos([...videoData]);
     }
   };
 
@@ -59,9 +76,7 @@ function App() {
       <header>
         <h1>SEVENTEEN Analytics</h1>
       </header>
-      <div>Title: {title[3]}</div>
-      <div>View Count: {viewCount[3]}</div>
-      <div>Like Count: {likeCount[3]}</div>
+      <YoutubeStats title={title} viewCount={viewCount} likeCount={likeCount} />
     </div>
   );
 }
