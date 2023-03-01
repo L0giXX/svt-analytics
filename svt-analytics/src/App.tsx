@@ -43,7 +43,7 @@ function App() {
 
   const apiHandler = async () => {
     const KEY = import.meta.env.VITE_KEY;
-    const video = [];
+    const temp = [];
     for (let i = 0; i < arr.length; i++) {
       const response = await fetch(
         `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${arr[i]}&key=${KEY}`
@@ -54,9 +54,9 @@ function App() {
         ["views"]: data["items"][0].statistics.viewCount,
         ["likes"]: data["items"][0].statistics.likeCount,
       };
-      video.push(obj);
+      temp.push(obj);
     }
-    setVideoData(video);
+    setVideoData(temp);
   };
 
   return (
