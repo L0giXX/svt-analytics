@@ -3,15 +3,12 @@ import YoutubeStats from "./components/YoutubeStats";
 import "./App.css";
 
 function App() {
-  const [videoData, setVideoData] = useState({
-    titleName: "",
-    views: "",
-    likes: "",
-  });
+  const [videoData, setVideoData] = useState([{}]);
   const [videos, setVideos] = useState<string[]>([]);
   const [title, setTitle] = useState<string[]>([]);
   const [viewCount, setViewCount] = useState<string[]>([]);
   const [likeCount, setLikeCount] = useState<string[]>([]);
+
   useEffect(() => {
     apiHandler();
   }, []);
@@ -45,30 +42,21 @@ function App() {
   );
 
   const apiHandler = async () => {
-    const titles = [];
-    const views = [];
-    const likes = [];
     const KEY = import.meta.env.VITE_KEY;
+    const video = [];
     for (let i = 0; i < arr.length; i++) {
       const response = await fetch(
         `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${arr[i]}&key=${KEY}`
       );
       const data = await response.json();
-      titles.push(data["items"][0].snippet.title);
-      views.push(data["items"][0].statistics.viewCount);
-      likes.push(data["items"][0].statistics.likeCount);
-      setTitle([...title, ...titles]);
-      setViewCount([...viewCount, ...views]);
-      setLikeCount([...likeCount, ...likes]);
-
-      setVideoData((existingVideos) => ({
-        ...existingVideos,
-        titleName: data["items"][0].snippet.title,
-        views: data["items"][0].statistics.viewCount,
-        likes: data["items"][0].statistics.likeCount,
-      }));
-      //setVideos([...videoData]);
+      const obj = {
+        ["titleName"]: data["items"][0].snippet.title,
+        ["views"]: data["items"][0].statistics.viewCount,
+        ["likes"]: data["items"][0].statistics.likeCount,
+      };
+      video.push(obj);
     }
+    setVideoData(video);
   };
 
   return (
